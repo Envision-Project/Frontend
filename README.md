@@ -1,3 +1,5 @@
-Start App:
-## npm ci
-## npm start
+To run app:
+```
+npm ci
+npm start
+```
