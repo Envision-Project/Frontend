@@ -1,0 +1,32 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  font-size: 18px;
+  background-color: #800000;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  position: sticky;
+  width: 100%;
+}
+.nav li:first-child {
+  margin-right: auto;
+}
+
+.nav li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav li a:focus {
+  color: #AC9362;
+}
