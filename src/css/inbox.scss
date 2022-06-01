@@ -1,0 +1,11 @@
+.inbox{
+
+    .outer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .inner{
+        padding: 2rem 5rem;
+    }
+}

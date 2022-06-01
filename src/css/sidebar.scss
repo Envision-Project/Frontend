@@ -1,0 +1,60 @@
+.sidebar{
+
+    width: 20%;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: medium;
+
+
+    .link{
+        text-decoration: none !important;
+        color: black;
+    
+    }
+
+    .menu{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        background-color: #FAFAFA;
+        height: 100vh;
+        border-radius: 0.4rem;
+        box-shadow: 10px 10px 10px #EEEEEE;
+    }
+    
+    .link:hover{
+        color: black;    
+    }
+    
+    .menu-option{
+        cursor: pointer;
+        padding: 1rem;    
+    }
+    
+    .menu-option:hover{
+        background-color: #F5F5F5;
+    }
+    
+    .menu-option:focus{
+        clip-path: inset();
+    }
+    
+    .selected{
+        background-color: #F5F5F5;
+        // color: white !important;
+    }
+    
+    .selected:hover{
+        background-color: #F5F5F5;
+        // color: white !important;
+    }
+
+    .projects{
+        margin-top: 2rem;
+    }
+
+    .projects-header{
+        padding: 0 1rem;  
+    }
+}
+
