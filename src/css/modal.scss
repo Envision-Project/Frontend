@@ -1,0 +1,16 @@
+.task-modal{
+
+    .modal-outer{
+        display: inl;
+        flex-direction: row;
+    }
+
+    .modal-inner{
+        display: inline-block;
+        // flex-direction: column;
+    }
+
+    div{
+        display: inline-block !important;
+    }
+}
