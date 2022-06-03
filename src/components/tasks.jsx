@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import {Button} from "react-bootstrap";
 import Task from "./task";
+import AddTask from "./addTask";
 
 const Tasks = (props) => {
 
@@ -43,7 +44,10 @@ const Tasks = (props) => {
     
     return (
         <div>
-            <div className='render-tasks'>
+
+            <div className='render-tasks mt-4'>
+
+                <AddTask></AddTask>
                 <div className='tasks'>
                     {
                         tasks.map((task, index) => {

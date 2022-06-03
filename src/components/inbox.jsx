@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../css/inbox.scss'
 import Sidebar from './sidebar';
 import Tasks from "./tasks";
+import AddTask from "./addTask";
 
 const Inbox = () => {
 
@@ -49,7 +50,8 @@ const Inbox = () => {
                 <Sidebar selected="inbox"/>
                 <div className='inner'>
                     <h2>Inbox</h2>
-                        <Tasks tasks={tasks}/>
+
+                    <Tasks tasks={tasks}/>
                 </div>
             </div>
         </div>

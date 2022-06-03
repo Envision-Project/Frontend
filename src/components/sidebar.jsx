@@ -1,9 +1,27 @@
-import React, { Component } from 'react';
+import React, {Component, useEffect, useState} from 'react';
 import {Link} from "react-router-dom";
 import './../css/sidebar.scss'
 
-const Sidebar = (props) => {    
-    
+const Sidebar = (props) => {
+
+    const sample_task_list = [
+        'Personal',
+        'Work',
+        'Shopping'
+    ]
+    const [taskList, setTaskList] = useState([]);
+
+    useEffect(() => {
+        setTaskList((sample_task_list));
+
+    }, []);
+
+    const colors = ['#EF9A9A', '#80DEEA', '#A5D6A7', '#E6EE9C', '#FFCC80'];
+
+    function getStyle(index){
+        return {backgroundColor : colors[index]}
+    }
+
     return (
         <div className="sidebar">
             <Link to='/inbox' className={'link ' + (props.selected == 'inbox' ? 'selected' : " ")}>
@@ -28,23 +46,21 @@ const Sidebar = (props) => {
             {/*    </div>*/}
             {/*</Link>      */}
 
-            <div className='projects'>  
+            <div className='projects'>
+
                 <h5 className='projects-header'>Projects</h5>
-                <Link to='/project/personal' className={'link ' + (props.selected === 'personal' ? 'selected' : " ")}>
-                    <div className={'menu-option ' + (props.selected === 'personal' ? 'selected' : " ")}>
-                        <i class="bi bi-person"/>Personal
-                    </div>  
-                </Link>
-                <Link to='/project/shopping' className={'link ' + (props.selected === 'shopping' ? 'selected' : " ")}>
-                    <div className={'menu-option ' + (props.selected === 'shopping' ? 'selected' : " ")}>
-                    <i class="bi bi-cart"/>Shopping
-                    </div>
-                </Link>      
-                <Link to='/project/work' className={'link ' + (props.selected === 'work' ? 'selected' : " ")}>
-                    <div className={'menu-option ' + (props.selected === 'work' ? 'selected' : " ")}>
-                        <i class="bi bi-person"/>Work
-                    </div>
-                </Link>
+                {
+                    taskList.map((taskListElement, index) => {
+                        return (
+                            <Link to={'/project/' + taskListElement} className={'link ' + (props.selected === taskListElement ? 'selected' : " ")}>
+                                <div className={'menu-option ' + (props.selected === taskListElement ? 'selected' : " ")}>
+                                    <div className="color" style={getStyle(index)}/>{taskListElement}
+                                </div>
+                            </Link>
+                        )
+                    })
+                }
+
             </div>         
         </div>
     )
