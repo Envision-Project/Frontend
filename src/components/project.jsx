@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import '../css/inbox.scss'
+import '../css/app-style.scss'
 import Sidebar from './sidebar';
 import Tasks from "./tasks";
+import {useParams} from "react-router-dom";
 
-const Inbox = () => {
+const Project = () => {
 
     const [tasks, setTasks] = useState([]);
+    const {projectId} = useParams();
 
     const sampleTasks= [
         {
@@ -33,7 +35,7 @@ const Inbox = () => {
 
     useEffect(() => {
 
-        // axios.get("http://localhost:8080/inbox")
+        // axios.get("http://localhost:8080/project/" + whereTo)
         //     .then(response => {
         //         setTasks(sampleTasks);
         //     console.log(tasks);
@@ -46,14 +48,14 @@ const Inbox = () => {
 
         <div className='app'>
             <div className='outer'>
-                <Sidebar selected="inbox"/>
+                <Sidebar selected={projectId}/>
                 <div className='inner'>
-                    <h2>Inbox</h2>
-                        <Tasks tasks={tasks}/>
+                    <h2>{projectId.charAt(0).toUpperCase() + projectId.substring(1)}</h2>
+                    <Tasks tasks={tasks}/>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Inbox;
+export default Project;

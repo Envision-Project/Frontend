@@ -22,29 +22,29 @@ const Sidebar = (props) => {
                     <i class="bi bi-card-list"></i>Upcoming
                 </div>
             </Link>     
-            <Link to='/filterslabels' className={'link ' + (props.selected == 'filters-labels' ? 'selected' : " ")}>
-                <div className={'menu-option ' + (props.selected == 'filters-labels' ? 'selected' : " ")}>
-                    <i class="bi bi-filter"></i>Filters & Labels
-                </div>
-            </Link>      
+            {/*<Link to='/filterslabels' className={'link ' + (props.selected == 'filters-labels' ? 'selected' : " ")}>*/}
+            {/*    <div className={'menu-option ' + (props.selected == 'filters-labels' ? 'selected' : " ")}>*/}
+            {/*        <i class="bi bi-filter"></i>Filters & Labels*/}
+            {/*    </div>*/}
+            {/*</Link>      */}
 
             <div className='projects'>  
                 <h5 className='projects-header'>Projects</h5>
-                <Link to='/personal' className={'link ' + (props.selected == 'personal' ? 'selected' : " ")}>
-                    <div className={'menu-option ' + (props.selected == 'personal' ? 'selected' : " ")}>
-                        <i class="bi bi-person"></i>Personal
+                <Link to='/project/personal' className={'link ' + (props.selected === 'personal' ? 'selected' : " ")}>
+                    <div className={'menu-option ' + (props.selected === 'personal' ? 'selected' : " ")}>
+                        <i class="bi bi-person"/>Personal
                     </div>  
                 </Link>
-                <Link to='/shopping' className={'link ' + (props.selected == 'shopping' ? 'selected' : " ")}>
-                    <div className={'menu-option ' + (props.selected == 'shopping' ? 'selected' : " ")}>
-                    <i class="bi bi-cart"></i>Shopping
+                <Link to='/project/shopping' className={'link ' + (props.selected === 'shopping' ? 'selected' : " ")}>
+                    <div className={'menu-option ' + (props.selected === 'shopping' ? 'selected' : " ")}>
+                    <i class="bi bi-cart"/>Shopping
                     </div>
                 </Link>      
-                <Link to='/work' className={'link ' + (props.selected == 'work' ? 'selected' : " ")}>
-                <div className={'menu-option ' + (props.selected == 'work' ? 'selected' : " ")}>
-                    <i class="bi bi-person"></i>Work
-                </div>
-            </Link>      
+                <Link to='/project/work' className={'link ' + (props.selected === 'work' ? 'selected' : " ")}>
+                    <div className={'menu-option ' + (props.selected === 'work' ? 'selected' : " ")}>
+                        <i class="bi bi-person"/>Work
+                    </div>
+                </Link>
             </div>         
         </div>
     )

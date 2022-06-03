@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import '../css/inbox.scss'
 import Sidebar from './sidebar';
 import Tasks from "./tasks";
 
-const Inbox = () => {
+const Upcoming = () => {
 
     const [tasks, setTasks] = useState([]);
 
@@ -46,14 +45,14 @@ const Inbox = () => {
 
         <div className='app'>
             <div className='outer'>
-                <Sidebar selected="inbox"/>
+                <Sidebar selected="upcoming"/>
                 <div className='inner'>
-                    <h2>Inbox</h2>
-                        <Tasks tasks={tasks}/>
+                    <h2>Upcoming</h2>
+                    <Tasks tasks={tasks}/>
                 </div>
             </div>
         </div>
     )
 }
 
-export default Inbox;
+export default Upcoming;

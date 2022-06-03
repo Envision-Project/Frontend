@@ -1,0 +1,70 @@
+.render-tasks{
+
+    .tasks{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .task{
+        display: flex;
+        flex-direction: row;
+        padding: 1rem ;
+        border: 1px solid #EEEEEE;
+        border-radius: 5px;
+        margin: 0.5rem 0;
+    }
+
+    .task:hover .options-hide{
+        // cursor: pointer;
+        display: flex;
+    }
+
+    .task-title{
+        font-weight: normal;
+    }
+
+    .options{
+        display: flex;
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    .options-btn{
+        all:unset;
+        cursor: pointer;
+        // margin: 0 0.5rem;
+        
+    }
+
+    .check{
+        margin: 0 1rem 0 0;
+        border: 2px solid black;
+        border-radius: 50%;
+        background-color: #EEEEEE;
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 1s;
+    }
+
+    .check:hover .hide{
+        cursor: pointer;
+        display: inline-block;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .options-hide{
+        display: none;
+    }
+
+    .tick{
+        font-size: medium;
+    }
+}
