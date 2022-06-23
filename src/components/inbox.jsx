@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import '../css/inbox.scss'
 import Sidebar from './sidebar';
 import Tasks from "./tasks";
@@ -33,14 +34,12 @@ const Inbox = () => {
     ]
 
     useEffect(() => {
-
-        // axios.get("http://localhost:8080/inbox")
-        //     .then(response => {
-        //         setTasks(sampleTasks);
-        //     console.log(tasks);
-        //     });
-        setTasks(sampleTasks);
-        console.log(tasks);
+        axios.get("http://localhost:8000/api/tasks/")
+             .then(response => {
+                 const tasks = response.data;
+                 setTasks(tasks);
+                 console.log(tasks);
+             });
     }, [])
 
     return (
